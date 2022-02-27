@@ -238,8 +238,4 @@ def upload_file():
 
 
 if __name__=="__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-p','--port',type=int,default=5000, help="Running port")
-    parser.add_argument("-H","--host",type=str,default='8080', help="Address to broadcast")
-    args = parser.parse_args()
-    app.run(host=args.host,port=args.port)
+    app.run(port=8080)
