@@ -56,8 +56,7 @@ jobs:
           
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
-        id: deploy-to-webapp
         with:
           app-name: 'dapter'
-          slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DB6EC45536AA4BB2AC20AFB554DAD07C }}
+          publish-profile: $
+          package: ./dist/dapter
