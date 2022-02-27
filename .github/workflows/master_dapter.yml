@@ -53,13 +53,11 @@ jobs:
         with:
           name: python-app
           path: .
-        
-     
-        
+          
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
+        id: deploy-to-webapp
         with:
           app-name: 'dapter'
-          publish-profile: $
-          package: ./dist/dapter
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7F7E7B70813947BF8B0F8192EC1406AB }}
+          slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_40CF14F2CC574858914885A2B2F5D0EE }}
